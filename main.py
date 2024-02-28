@@ -49,7 +49,7 @@ class HiroshiBot:
             BotCommand(
                 command="reset", description="Reset your conversation history (will reduce prompt and save some tokens)"
             ),
-            BotCommand(command="provider", description="Select GPT provider"),
+            BotCommand(command="provider", description="Select GPT provider\n\nDeveloper: @kaifsarkar53"),
         ]
 
     async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -66,8 +66,8 @@ class HiroshiBot:
         telegram_message = get_telegram_message(update=update)
 
         text = (
-            "If you like me, or you have some questions, feature requests or any issues found, please, "
-            "feel free to visit my GitHub page: https://github.com/s-nagaev/hiroshi. Thank you!\n\n"
+            "This bot provides free ai experience using gpt4free, "
+            "if you are facing any issue related to the bot feel free to contact the developer\n\nDeveloper:@kaifsarkar53"
         )
         await telegram_message.reply_text(text, disable_web_page_preview=True)
 
